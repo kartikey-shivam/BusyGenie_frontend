@@ -1,6 +1,6 @@
 import React from "react";
 
-const Radio = () => {
+const Radio = (props) => {
   return (
     // <div>
     <div className="radio-btn">
@@ -10,8 +10,9 @@ const Radio = () => {
             className="form_radio-input"
             type="radio"
             name="sample"
-            value=""
+            value="red"
             id="red"
+            onChange={props.Change}
           />
           <label for="red" className="form_radio-label">
             <span className="form_radio-button form_radio-button_red"> </span>{" "}
@@ -25,8 +26,9 @@ const Radio = () => {
             className="form_radio-input"
             type="radio"
             name="sample"
-            value=""
+            value="orange"
             id="orange"
+            onChange={props.Change}
           />
           <label for="orange" className="form_radio-label">
             <span className="form_radio-button form_radio-button_orange">

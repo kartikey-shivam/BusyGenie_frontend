@@ -8,11 +8,15 @@ import registerServiceWorker from "./registerServiceWorker";
 import { BrowserRouter } from "react-router-dom";
 import Reducer from "./store/reducer";
 import store from "./store/store";
+import SettingsContextProvider from "./pomodoro/context/SettingsContext";
+
 // const store = createStore(Reducer);
 ReactDOM.render(
   <Provider store={store}>
     {" "}
-    <App />{" "}
+    <SettingsContextProvider>
+      <App />{" "}
+    </SettingsContextProvider>
   </Provider>,
   document.getElementById("root")
 );

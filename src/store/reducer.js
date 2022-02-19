@@ -33,6 +33,9 @@ export const customReducer = createReducer(initialState, {
   updateDataComment: (state, action) => {
     state.comment = action.val;
   },
+  updatePrecedence: (state, action) => {
+    state.precedence = action.val;
+  },
   show: (state) => {
     state.show = true;
   },

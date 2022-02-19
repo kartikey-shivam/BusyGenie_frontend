@@ -11,7 +11,7 @@
 .Home-parent {
   display: flex;
   align-items: center;
-  color: rgb(228, 171, 149);
+  // color: rgb(228, 171, 149);
 }
 .Home-details-name {
   font-size: 24px;
@@ -27,20 +27,28 @@
   font-family: cursive;
 }
 .primary-text1 {
-  background-color: aqua;
-  color: white;
+  // background-color: aqua;
+  color: $primary-color_light;
+  font-family: aladdin;
+  font-size: 3rem;
+  font-weight: bold;
 }
 .primary-text2 {
-  background-color: rgb(89, 0, 255);
-  color: white;
+  // background-color: rgb(89, 0, 255);
+  color: $primary-color_light;
+  -webkit-text-stroke: 1px $primary-color;
+  font-family: oldnewspaper;
 }
 .highlighted-text {
-  color: black;
+  color: $primary-color;
+  font-family: kingsOfThieves;
+  // text-decoration: solid;
+  font-size: 4rem;
 }
 .Home-role-tagline {
   font-size: 20px;
   margin: 5px 0 5px 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: oldnewspaper;
 }
 .Home-options {
   margin: 0 0 0 28px;

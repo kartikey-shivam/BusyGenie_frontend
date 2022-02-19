@@ -15,6 +15,8 @@ import Show from "./task/openTaskPage/taskShow";
 import About from "./about/about";
 import Contact from "./contact/contact";
 import TimeBox from "./task/timebar/time";
+import Calendar from "./task/calendar/calendar";
+import PomodoroClock from "./pomodoro/pomodoro";
 class App extends Component {
   render() {
     return (
@@ -25,6 +27,7 @@ class App extends Component {
           <div className="">
             {" "}
             <Layout />
+            {/* <PomodoroClock /> */}
             {/* <Sign_in /> */}
             {/* <Up /> */}
             {/* <Show /> */}
@@ -33,16 +36,21 @@ class App extends Component {
             {/* <Signup /> */}
             {/* <Add_task /> */}
             {/* <Error /> */}
-            <Home />
+            {/* <Home /> */}
             {/* <Contact /> */}
             {/* <TimeBox /> */}
           </div>{" "}
           <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/task" element={<Task_ui />} />
             <Route path="/about" exact element={<About />} />{" "}
             <Route path="/signup" exact element={<Signup />} />{" "}
             <Route path="/signin" exact element={<Sign_in />} />{" "}
             <Route path="/addtask" exact element={<Add_task />} />{" "}
             <Route path="/showingTask" exact element={<Show />} />
+            <Route path="/calendar" exact element={<Calendar />} />
+            <Route path="/contactus" exact element={<Contact />} />
+            <Route path="/task/pomodoro" exact element={<PomodoroClock />} />
           </Routes>{" "}
         </div>{" "}
       </BrowserRouter>

@@ -16,8 +16,8 @@ class Task_ui extends Component {
         {/* <Layout /> */}
         <Task_user />
         <Task_input />
-        <Cld />
-        <Routes></Routes>{" "}
+        {/* <Cld />
+        <Routes></Routes>{" "} */}
       </div>
     );
   }

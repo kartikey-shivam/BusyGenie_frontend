@@ -5,7 +5,13 @@
   justify-content: space-between;
   align-items: center;
   font-family: kingsOfThieves;
-  margin-top: 15%;
+  &_heading {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    // text-transform: uppercase;
+    // background-color: aqua;
+  }
+  // margin-top: 15%;
   margin-bottom: 10%;
   &-info {
     // background-color: aquamarine;
@@ -17,7 +23,7 @@
   &-main {
     height: 80vh;
     width: 90%;
-    margin-top: 5%;
+    margin-top: 2%;
     background-color: rgba(192, 161, 60, 0.8);
     // border: 2px solid black;
     // border-radius: 2%;

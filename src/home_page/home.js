@@ -34,7 +34,7 @@ export default function Home() {
             <div className="Home-details-name">
               <span className="primary-text1">
                 {" "}
-                Hello, I'M <span className="highlighted-text">Pragya</span>
+                Hello, I'M <span className="highlighted-text">Genie</span>
               </span>
             </div>
             <div className="Home-details-role">
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
             {/* <div className="Home-options"> */}
             {/* <button className="btn primary-btn">{""}Get Started </button> */}
-            <a href="https://www.linkedin.com/feed/">
+            <a href="/signup">
               <button className="btn btn--white">Lets Go</button>
             </a>
             {/* </div> */}
@@ -98,7 +98,7 @@ export default function Home() {
             </div>
             <div class="card__side card__side--back card__side--back-1">
               <div class="card__cta">
-                <a href="/contact">
+                <a href="/contactus">
                   <button className="btn btn--white">Explore</button>
                 </a>
               </div>
@@ -144,7 +144,7 @@ export default function Home() {
             </div>
             <div class="card__side card__side--back card__side--back-3">
               <div class="card__cta">
-                <a href="/task">
+                <a href="/calendar">
                   <button className="btn btn--white">Explore</button>
                 </a>
               </div>

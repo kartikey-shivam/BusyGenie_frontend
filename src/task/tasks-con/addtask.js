@@ -10,9 +10,12 @@ const Add_task = () => {
   const tsk = useSelector((state) => state.custom.taskName);
   const dof = useSelector((state) => state.custom.dateOfFinalization);
   const cmt = useSelector((state) => state.custom.comment);
+  const pdc = useSelector((state) => state.custom.precedence);
+  console.log("hey", pdc);
   const postHandler = () => {
     const data = {
       taskName: tsk,
+      precedence: pdc,
       dateOfFinalization: dof,
       comment: cmt,
     };
@@ -32,11 +35,18 @@ const Add_task = () => {
         val: evt.target.value,
       });
     };
+    const updatePrecedence = (evt) => {
+      console.log(evt.target.value);
+      dispatch({
+        type: "updatePrecedence",
+        val: evt.target.value,
+      });
+    };
     const updateDataComment = (evt) => {
       console.log("changed", evt.target.value);
 
       dispatch({
-        type: "comment",
+        type: "updateDataComment",
         val: evt.target.value,
       });
     };
@@ -62,7 +72,8 @@ const Add_task = () => {
             <div className="other-con_sub">
               <div class="form_grp">
                 {" "}
-                <h3 className="other_info-heading"> Precedence </h3> <Radio />
+                <h3 className="other_info-heading"> Precedence </h3>
+                <Radio Change={updatePrecedence} />
               </div>{" "}
             </div>{" "}
             <Other_info1

@@ -20,11 +20,11 @@ const Show = () => {
   };
   const markAsDonefunc = () => {
     if (markAsDone) {
-      axios.put(`http://localhost:8000/api/v1/timeEntry/${id}`, {
+      axios.put(`http://localhost:8000/api/v1/timeEntry/${id}`, id, {
         markAsDone: false,
       });
     } else {
-      axios.put(`http://localhost:8000/api/v1/timeEntry/${id}`, {
+      axios.put(`http://localhost:8000/api/v1/timeEntry/${id}`, id, {
         markAsDone: true,
       });
     }

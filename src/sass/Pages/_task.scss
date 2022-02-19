@@ -466,6 +466,9 @@
     // margin: 1%;
     background-color: red;
     border-radius: 100%;
+    &-1 {
+      background-color: orange;
+    }
   }
   &-checkbox {
     width: 100%;

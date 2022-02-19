@@ -450,8 +450,10 @@ textarea {
   justify-content: space-between;
   align-items: center;
   font-family: kingsOfThieves;
-  margin-top: 15%;
   margin-bottom: 10%; }
+  .calender_heading {
+    font-size: 3rem;
+    letter-spacing: 2px; }
   .calender-info {
     display: flex;
     flex-direction: column;
@@ -460,7 +462,7 @@ textarea {
   .calender-main {
     height: 80vh;
     width: 90%;
-    margin-top: 5%;
+    margin-top: 2%;
     background-color: rgba(192, 161, 60, 0.8); }
 
 .card {
@@ -794,8 +796,7 @@ textarea {
 
 .Home-parent {
   display: flex;
-  align-items: center;
-  color: #e4ab95; }
+  align-items: center; }
 
 .Home-details-name {
   font-size: 24px;
@@ -811,20 +812,25 @@ textarea {
   font-family: cursive; }
 
 .primary-text1 {
-  background-color: aqua;
-  color: white; }
+  color: #86433a;
+  font-family: aladdin;
+  font-size: 3rem;
+  font-weight: bold; }
 
 .primary-text2 {
-  background-color: #5900ff;
-  color: white; }
+  color: #86433a;
+  -webkit-text-stroke: 1px #861a0c;
+  font-family: oldnewspaper; }
 
 .highlighted-text {
-  color: black; }
+  color: #861a0c;
+  font-family: kingsOfThieves;
+  font-size: 4rem; }
 
 .Home-role-tagline {
   font-size: 20px;
   margin: 5px 0 5px 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
+  font-family: oldnewspaper; }
 
 .Home-options {
   margin: 0 0 0 28px; }
@@ -1354,6 +1360,8 @@ textarea {
     padding: 1%;
     background-color: red;
     border-radius: 100%; }
+    .status-dot-1 {
+      background-color: orange; }
   .status-checkbox {
     width: 100%;
     height: 100%; }
@@ -1705,3 +1713,138 @@ textarea {
   border-radius: 100%;
   width: 60%;
   height: 75%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+.container {
+  color: #c9ccea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #272a55;
+  background: radial-gradient(circle, #1e2140 0%, #151932 65%); }
+  .container-heading {
+    margin: 0%;
+    font-family: kingsOfThieves; }
+
+.labels-con {
+  margin: 5%;
+  width: 50%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+  .labels-con-min {
+    background-color: #fe6f6b;
+    width: 100%; }
+
+.container h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.2rem; }
+
+.labels {
+  background-color: #fe6f6b; }
+
+.container .labels {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.3rem;
+  margin: 10%;
+  background-color: #0c0e1b;
+  width: 50%;
+  border-radius: 1.5rem; }
+
+.active-label {
+  color: white;
+  background-color: #fe6f6b; }
+
+.timer-container {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: center; }
+
+.time-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 7.5rem;
+  color: #efefef;
+  background: #151932;
+  font-size: 3.5rem;
+  box-shadow: 1rem 1.5rem 2rem rgba(0, 0, 0, 0.6); }
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; }
+
+button {
+  color: #efefef;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 3rem;
+  margin: 0.2rem;
+  background: #0c0e1b;
+  min-width: 80px;
+  cursor: pointer; }
+
+.button-wrapper button.activve {
+  color: #0c0e1b;
+  background-color: #c9ccea;
+  border: 1px solid #0c0e1b; }
+
+.form-container-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.form-container-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+
+.submit-btn {
+  padding: 1%;
+  width: 40%;
+  height: 50%;
+  font-size: 1.5rem;
+  margin: 5%; }
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%; }
+
+.input-wrapper .input-1 {
+  height: 70px;
+  width: 70px;
+  padding: 2rem;
+  box-decoration-break: none;
+  background-color: #080f38;
+  color: #c9ccea;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 17pt; }

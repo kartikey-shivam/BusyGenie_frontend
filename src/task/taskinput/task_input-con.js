@@ -53,11 +53,13 @@ const Sidebar = () => {
       </div>{" "}
       <div className="task_input-container-sidebar_item task_input-container-sidebar-3">
         {" "}
-        <img
-          src={Trash}
-          alt=""
-          className="task_input-container-sidebar_img"
-        />{" "}
+        <a href="/task/pomodoro">
+          <img
+            src={Trash}
+            alt=""
+            className="task_input-container-sidebar_img"
+          />{" "}
+        </a>
         <span className="logo-hover_text"> Delete </span>{" "}
       </div>{" "}
     </div>
@@ -91,11 +93,13 @@ const Task_input_con = () => {
         <AddingTask
           Name={task.taskName}
           Date={task.dateOfFinalization}
+          precedence={task.precedence}
           Clicked={() => {
             dispatch({
               type: "updateData",
               tsk: task.taskName,
               dof: task.dateOfFinalization,
+              pdc: task.precedence,
               id: task._id,
               msd: task.markAsDone,
               cmt: task.comment,

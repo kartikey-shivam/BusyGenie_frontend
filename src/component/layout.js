@@ -1,10 +1,15 @@
 import React from "react";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useNavigate } from "react-router-dom";
 import logoimg from "../images/logo";
 import Signup from "../signup-in/signup";
-import Sign_in from "./../signup-in/signin";
-import Task from "./../task/task";
+import Sign_in from "../signup-in/signin";
+import Task from "../task/task";
 import List from "../logo/list.png";
+import { logout, reset } from "../features/auth/authSlice";
+import Panel1 from "./panel1";
+import Panel2 from "./Panel2";
+
+import { useDispatch, useSelector } from "react-redux";
 // const Nav = () => {
 //   return (
 //     <div className="navbar">
@@ -13,54 +18,16 @@ import List from "../logo/list.png";
 //   );
 // };
 const Layout = (props) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
+  const onLogout = () => {
+    dispatch(logout());
+    dispatch(reset());
+    navigate("/");
+  };
   return (
     <div>
-      {/* <div className="navbar-list">
-        <div className="navbar-list_con">
-          <div className="navbar_content">
-            <img src={List} alt="" className="navbar-list_img" />
-            <ul className="navbar_content_item"> Home </ul>{" "}
-            <ul className="navbar_content_item">
-              {" "}
-              <Link to={{ pathname: "/task" }}> Tasks </Link>{" "}
-            </ul>{" "}
-            <ul className="navbar_content_item">
-              <Link to={{ pathname: "/about" }}>About</Link>
-            </ul>{" "}
-            <ul className="navbar_content_item"> Contact Us </ul>{" "}
-            <div
-              type="#"
-              className="signup-btn navbar_content_item navbar_content_item-btn "
-            >
-              {" "}
-              <Link to="/signin"> Log In </Link>{" "}
-            </div>{" "}
-          </div>{" "}
-        </div>
-      </div>
-      <div className="navbar">
-        <div className="navbar_content">
-          <div className="logo">
-            <img src={logoimg} alt="logo" className="logo_img" />
-          </div>{" "}
-          <ul className="navbar_content_item"> Home </ul>{" "}
-          <ul className="navbar_content_item">
-            {" "}
-            <Link to={{ pathname: "/task" }}> Tasks </Link>{" "}
-          </ul>{" "}
-          <ul className="navbar_content_item">
-            <Link to={{ pathname: "/about" }}>About</Link>
-          </ul>{" "}
-          <ul className="navbar_content_item"> Contact Us </ul>{" "}
-          <div
-            type="#"
-            className="signup-btn navbar_content_item navbar_content_item-btn "
-          >
-            {" "}
-            <Link to="/signin"> Log In </Link>{" "}
-          </div>{" "}
-        </div>{" "}
-  </div>{" "} */}
       <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
@@ -82,23 +49,10 @@ const Layout = (props) => {
                 <span>02</span>Tasks
               </a>
             </li>
-            <li class="navigation__item">
-              <a href="/signin" class="navigation__link">
-                <span>03</span>Log In
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="/signup" class="navigation__link">
-                <span>04</span>Sign Up
-              </a>
-            </li>
+            {user ? <Panel1 Clicked={onLogout} /> : <Panel2 />}
           </ul>
         </nav>
       </div>
-      <Routes>
-        <Route path="/signin" exact element={<Sign_in />} />{" "}
-        <Route path="/task" exact element={<Task />} />{" "}
-      </Routes>{" "}
     </div>
   );
 };
