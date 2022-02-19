@@ -13,7 +13,7 @@ const initialState = {
   id: "",
   taskName: "reBorn to Love",
   precedence: "",
-  dateOfFinalization: "2022.02.20",
+  dateOfFinalization: "",
   comment: "hello world",
   markAsDone: false,
 

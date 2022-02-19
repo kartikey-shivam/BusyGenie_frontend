@@ -18,28 +18,50 @@ code {
   flex-direction: column;
   align-items: center;
   // padding: 5%;
-  justify-content: center;
+  justify-content: space-evenly;
   min-height: 100vh;
-  background: rgb(39, 42, 85);
-  background: radial-gradient(circle, #1e2140 0%, #151932 65%);
+  margin-top: -4%;
+  margin-bottom: 5%;
+  // background: rgb(39, 42, 85);
+  background: radial-gradient(
+    circle,
+    rgba(30, 33, 64, 0.897) 0%,
+    rgba(21, 25, 50, 0) 65%
+  );
+  &-sec-1 {
+    // background-color: #fff;
+    margin: 5%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+  }
   &-heading {
     // background-color: #fe6f6b;
     margin: 0%;
     font-family: kingsOfThieves;
   }
 }
+
 .labels-con {
   // background-color: aqua;
   margin: 5%;
   width: 50%;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  // align-items: stretch;
   &-min {
-    background-color: #fe6f6b;
+    // background-color: #fe6f6b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
+    height: 80%;
   }
 }
 .container h1 {
@@ -47,19 +69,19 @@ code {
   margin-bottom: 0.2rem;
   // margin-top: -20%;
 }
-.labels {
-  background-color: #fe6f6b;
-}
 
 .container .labels {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   font-size: 0.8rem;
   padding: 0.3rem 0.3rem;
-  margin: 10%;
+  // margin: 10%;
+  margin: 5% auto;
   background-color: #0c0e1b;
-  width: 50%;
+  width: 60%;
   border-radius: 1.5rem;
 }
 
@@ -73,8 +95,15 @@ code {
   flex: 2;
   align-items: center;
   justify-content: center;
+  margin: 5%;
 }
-
+// .setting-btn {
+//   background-color: #fff;
+//   margin: 5% !important;
+//   font-size: 1.5rem;
+//   padding: 2%;
+//   // transform: translateY(-20%);
+// }
 .time-wrapper {
   display: flex;
   align-items: center;
@@ -91,17 +120,18 @@ code {
 .button-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-evenly;
   padding: 2rem;
 }
 
 button {
   color: #efefef;
-  font-size: 0.8rem;
-  padding: 0.5rem 1.2rem;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 3rem;
-  margin: 0.2rem;
+  margin: 1rem;
   background: #0c0e1b;
   min-width: 80px;
   cursor: pointer;
@@ -123,7 +153,7 @@ button {
   // background-color: #0e2df5;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }

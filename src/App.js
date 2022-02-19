@@ -50,6 +50,7 @@ class App extends Component {
             <Route path="/showingTask" exact element={<Show />} />
             <Route path="/calendar" exact element={<Calendar />} />
             <Route path="/contactus" exact element={<Contact />} />
+            <Route path="/userprofile" exact element={<Up />} />
             <Route path="/task/pomodoro" exact element={<PomodoroClock />} />
           </Routes>{" "}
         </div>{" "}

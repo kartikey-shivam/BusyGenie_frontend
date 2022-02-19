@@ -41,36 +41,40 @@ const events = [
 
 function Cld() {
   const [newEvent, setNewEvent] = useState({
-    taskName: "",
+    title: "",
     start: "",
-    dateOfFinalization: "",
+    end: "",
   });
+  const [data, setData] = useState([]);
   const [allEvents, setAllEvents] = useState(events);
   useEffect(() => {
     axios.get("http://localhost:8000/api/v1/timeEntry").then((responseData) => {
       const loadedTask = responseData.data;
       console.log(loadedTask);
-      setAllEvents(loadedTask);
-      console.log("this", allEvents);
+      setData(loadedTask);
+      console.log("this", data);
     });
   }, []);
-  // function handleAddEvent() {
-  //   setAllEvents([...allEvents, newEvent]);
-  // }
+  function handleAddEvent() {
+    axios.post("http://localhost:8000/api/v1/timeEntry", newEvent);
+    // setAllEvents([...allEvents, newEvent]);
+  }
+  const start = new Date();
 
   return (
     <div className="calender">
       <h1 className="calender_heading">Calendar</h1>
       {/* <h2 className="calender_heading-2">Add New Event</h2> */}
       <div className="calender-info">
-        {/* <input
+        <input
           type="text"
+          className="calendar-input"
           placeholder="Add TaskName"
           style={{ width: "20%", marginRight: "10px" }}
           value={newEvent.title}
           onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
-        /> */}
-        {/* <DatePicker
+        />
+        <DatePicker
           placeholderText="Start Date"
           style={{ marginRight: "10px" }}
           selected={newEvent.start}
@@ -79,11 +83,13 @@ function Cld() {
         <DatePicker
           placeholderText="End Date"
           selected={newEvent.end}
-          onChange={(end) => setNewEvent({ ...newEvent, end })}
-        /> */}
-        {/* <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
+          onChange={(dateOfFinalization) =>
+            setNewEvent({ ...newEvent, dateOfFinalization })
+          }
+        />
+        <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
           Add Event
-        </button> */}
+        </button>
       </div>
       <Calendar
         localizer={localizer}

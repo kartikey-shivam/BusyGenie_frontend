@@ -14,23 +14,24 @@ const Show = () => {
   const id = useSelector((state) => state.custom.id);
   const comment = useSelector((state) => state.custom.comment);
   const markAsDone = useSelector((state) => state.custom.markAsDone);
+  // const msd = useSelector((state) => state.markAsDone);
   const deleteHandler = () => {
     // console.log(id);
     axios.delete(`http://localhost:8000/api/v1/timeEntry/${id}`);
   };
   const markAsDonefunc = () => {
     if (markAsDone) {
-      axios.put(`http://localhost:8000/api/v1/timeEntry/${id}`, id, {
+      axios.patch(`http://localhost:8000/api/v1/timeEntry/${id}`, {
         markAsDone: false,
       });
     } else {
-      axios.put(`http://localhost:8000/api/v1/timeEntry/${id}`, id, {
+      axios.patch(`http://localhost:8000/api/v1/timeEntry/${id}`, {
         markAsDone: true,
       });
     }
   };
-  const msd = useSelector((state) => state.markAsDone);
-  const mark = msd ? "mark as undone" : "mark as done";
+  const mark = markAsDone ? "mark as undone" : "mark as done";
+  console.log(mark);
   return (
     <div className="task_show">
       <div className="back">
@@ -59,9 +60,11 @@ const Show = () => {
         <TimeBox />
       </div>
       <div className="show-btn">
-        <button type="" className="show-btn-1" onClick={markAsDonefunc}>
-          {mark}
-        </button>
+        <a href="/task">
+          <button type="" className="show-btn-1" onClick={markAsDonefunc}>
+            {markAsDone ? "mark as undone" : "mark as done"}
+          </button>
+        </a>
         <button type="" className="show-btn-1" onClick={deleteHandler}>
           <a href="/task">Delete</a>
         </button>
@@ -72,4 +75,5 @@ const Show = () => {
     </div>
   );
 };
+3;
 export default Show;

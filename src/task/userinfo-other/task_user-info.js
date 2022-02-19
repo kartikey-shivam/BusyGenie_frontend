@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Component } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 import userphoto from "./../../images/user.png";
 import Cloud from "./../../images/Layer6.png";
 import Genie5 from "./../../images/genie5.png";
+import axios from "axios";
 const Task_user = () => {
+  // const [name, email] = useSelector((state) => state.auth.user);
+  // const [userInfo,setUserInfo] = useState([])
+  // useEffect(() => {
+  //   axios.get("http://localhost:8000/api/v1/timeEntry").then((responseData) => {
+  //     const loadedTask = responseData.data;
+  //     setTaskList(loadedTask);
+  //   });
+  // }, []);
+  // console.log("hey1", name);
+  const { token, user } = useSelector((state) => state.auth.user);
   return (
     <div className="section-1">
       <div className="task_user-back_img">
@@ -25,8 +36,7 @@ const Task_user = () => {
         <div className="task_user-info_nt">
           <div className="task_user-info_nt_name">
             {" "}
-            Hi {useSelector((state) => state.custom.name)}, here some task that
-            you have to complete.{" "}
+            Hi {user.name}, here some task that you have to complete.{" "}
           </div>{" "}
         </div>{" "}
       </div>{" "}

@@ -29,14 +29,16 @@ const Sidebar = () => {
       </div>{" "}
       <div className="task_input-container-sidebar_item task_input-container-sidebar-2">
         {" "}
-        <img
-          src={Check}
-          alt=""
-          className="task_input-container-sidebar_img"
-        />{" "}
-        <span className="logo-hover_text"> Mark as done </span>{" "}
+        <a href="/calendar">
+          <img
+            src={Check}
+            alt=""
+            className="task_input-container-sidebar_img"
+          />{" "}
+        </a>
+        <span className="logo-hover_text">calendar </span>{" "}
       </div>{" "}
-      <div className="task_input-container-sidebar_item task_input-container-sidebar-2">
+      {/* <div className="task_input-container-sidebar_item task_input-container-sidebar-2">
         {" "}
         <img
           src={Filter}
@@ -50,7 +52,7 @@ const Sidebar = () => {
             <li className="other-option_container-subjects"> By Date </li>{" "}
           </ul>{" "}
         </span>{" "}
-      </div>{" "}
+      </div>{" "} */}
       <div className="task_input-container-sidebar_item task_input-container-sidebar-3">
         {" "}
         <a href="/task/pomodoro">
@@ -60,7 +62,7 @@ const Sidebar = () => {
             className="task_input-container-sidebar_img"
           />{" "}
         </a>
-        <span className="logo-hover_text"> Delete </span>{" "}
+        <span className="logo-hover_text"> pomodoro clock</span>{" "}
       </div>{" "}
     </div>
   );
@@ -94,6 +96,7 @@ const Task_input_con = () => {
           Name={task.taskName}
           Date={task.dateOfFinalization}
           precedence={task.precedence}
+          Mark={task.markAsDone}
           Clicked={() => {
             dispatch({
               type: "updateData",

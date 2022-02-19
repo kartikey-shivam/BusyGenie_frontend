@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
+// import { useSelector } from "react-redux";
 import logoimg from "../images/logo";
 import Signup from "../signup-in/signup";
 import Sign_in from "../signup-in/signin";
@@ -49,7 +50,7 @@ const Layout = (props) => {
                 <span>02</span>Tasks
               </a>
             </li>
-            {user ? <Panel1 Clicked={onLogout} /> : <Panel2 />}
+            {user ? <Panel2 Clicked={onLogout} /> : <Panel1 />}
           </ul>
         </nav>
       </div>

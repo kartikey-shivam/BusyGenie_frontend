@@ -13,8 +13,8 @@ import SettingsContextProvider from "./pomodoro/context/SettingsContext";
 // const store = createStore(Reducer);
 ReactDOM.render(
   <Provider store={store}>
-    {" "}
     <SettingsContextProvider>
+      {" "}
       <App />{" "}
     </SettingsContextProvider>
   </Provider>,

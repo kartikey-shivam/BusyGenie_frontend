@@ -3,7 +3,7 @@ const Panel2 = (props) => {
   return (
     <div>
       <li class="navigation__item">
-        <a href="/up" class="navigation__link">
+        <a href="/userprofile" class="navigation__link">
           <span>03</span>user profile
         </a>
       </li>

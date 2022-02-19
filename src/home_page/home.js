@@ -3,6 +3,7 @@ import Typical from "react-typical";
 import Image from "./../assets/Home/profilephoto.png";
 import Layout from "./../component/layout";
 import Logo from "./../logo/logo.png";
+import { useSelector } from "react-redux";
 // import "./Home.css";
 // // import homepng from "./../images/homepng.png";
 // const Home = () => {
@@ -25,6 +26,8 @@ import Logo from "./../logo/logo.png";
 // };
 // export default Home;
 export default function Home() {
+  const { user } = useSelector((state) => state.auth);
+
   return (
     <div>
       {/* <Layout /> */}
@@ -66,7 +69,7 @@ export default function Home() {
             </div>
             {/* <div className="Home-options"> */}
             {/* <button className="btn primary-btn">{""}Get Started </button> */}
-            <a href="/signup">
+            <a href={user ? "/task" : "/signin"}>
               <button className="btn btn--white">Lets Go</button>
             </a>
             {/* </div> */}
@@ -121,7 +124,7 @@ export default function Home() {
             </div>
             <div class="card__side card__side--back card__side--back-2">
               <div class="card__cta">
-                <a href="/task">
+                <a href={user ? "/task" : "/signin"}>
                   <button className="btn btn--white">Exlpore</button>
                 </a>
               </div>
@@ -144,7 +147,7 @@ export default function Home() {
             </div>
             <div class="card__side card__side--back card__side--back-3">
               <div class="card__cta">
-                <a href="/calendar">
+                <a href={user ? "/calendar" : "/signin"}>
                   <button className="btn btn--white">Explore</button>
                 </a>
               </div>

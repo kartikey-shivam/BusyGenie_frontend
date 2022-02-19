@@ -23,8 +23,10 @@ const PomodoroClock = () => {
 
   return (
     <div className="container">
-      <h1 className="container-heading">Pomodoro</h1>
-      <small>Be productive the right way.</small>
+      <div className="container-sec-1">
+        <h1 className="container-heading">Pomodoro</h1>
+        <small className="small-text">Be productive the right way.</small>
+      </div>
       <div className="labels-con">
         {pomodoro !== 0 ? (
           <div className="labels-con-min">
@@ -57,7 +59,11 @@ const PomodoroClock = () => {
                 />
               </li>
             </ul>
-            <Button title="Settings" _callback={SettingsBtn} />
+            <Button
+              className="setting-btn"
+              title="Settings"
+              _callback={SettingsBtn}
+            />
             <div className="timer-container">
               <div className="time-wrapper">
                 <CountdownAnimation

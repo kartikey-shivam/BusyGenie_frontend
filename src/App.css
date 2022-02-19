@@ -1169,7 +1169,7 @@ textarea {
       font-family: kingsOfThieves;
       letter-spacing: 2px;
       align-items: center;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 700; }
     .task_user-info_nt_time {
       height: 40%;
@@ -1188,7 +1188,7 @@ textarea {
       justify-content: center;
       text-align: center; }
       .task_user-info_nt_name {
-        font-size: 1.2rem; } }
+        font-size: 1rem; } }
 
 @media screen and (max-width: 600px) {
   .task_user-info {
@@ -1263,7 +1263,7 @@ textarea {
           display: flex;
           justify-content: center;
           height: 15%;
-          font-size: 1.4rem;
+          font-size: 2.3rem;
           transform: translateY(-10%); }
       .task_input-container-sidebar {
         width: 5%;
@@ -1274,8 +1274,8 @@ textarea {
         flex-direction: column;
         justify-content: space-evenly; }
         .task_input-container-sidebar_img {
-          height: 100%;
-          width: 100%; }
+          height: 120%;
+          width: 120%; }
         .task_input-container-sidebar_item {
           padding: 10%; }
           .task_input-container-sidebar_item:hover {
@@ -1317,7 +1317,7 @@ textarea {
 
 .logo-hover_text {
   position: absolute;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
   padding: 0.2rem;
   background-color: white;
   display: inline-block;
@@ -1374,11 +1374,13 @@ textarea {
   margin-bottom: 1.5%;
   margin-top: 2%;
   height: 15%;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: row; }
   .tasks-name:hover {
     background-color: rgba(253, 252, 250, 0.5);
     border-left: 5px solid #86433a;
+    color: #861a0c;
     cursor: pointer; }
   .tasks-name_box {
     height: 60%;
@@ -1390,11 +1392,19 @@ textarea {
     border-radius: 1%;
     position: relative;
     align-items: center; }
+    .tasks-name_container-done:hover {
+      background-color: rgba(192, 192, 192, 0.5); }
     .tasks-name_container-date {
       width: 20%;
       display: flex;
       align-items: center;
       height: 80%; }
+      .tasks-name_container-date:hover {
+        color: #861a0c; }
+      .tasks-name_container-date-done {
+        color: rgba(192, 192, 192, 0.7);
+        font-weight: bolder;
+        text-decoration: line-through; }
   .tasks-name_img {
     height: 100%;
     width: 100%; }
@@ -1410,7 +1420,11 @@ textarea {
   display: flex;
   align-items: center;
   font-family: oldnewspaper;
-  font-size: 1.2rem; }
+  font-size: 2rem; }
+  .taskName-done {
+    color: rgba(192, 192, 192, 0.493);
+    font-weight: bold;
+    text-decoration: line-through; }
 
 @media screen and (max-width: 600px) {
   .taskName {
@@ -1527,7 +1541,6 @@ textarea {
 
 .task_show {
   display: flex;
-  background-color: aqua;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -1537,9 +1550,22 @@ textarea {
   height: 90vh;
   width: 65%;
   animation: fadeout 0.5s ease-out; }
+  @media only screen and (max-width: 56.25em) {
+    .task_show {
+      background-color: aqua;
+      height: 80vh;
+      width: 85%;
+      top: 15%;
+      left: 12%; } }
+  @media only screen and (max-width: 37.5em) {
+    .task_show {
+      background-color: aqua;
+      height: 60vh;
+      width: 85%;
+      top: 20%;
+      left: 8%; } }
 
 .back {
-  background-color: #861a0c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1553,43 +1579,88 @@ textarea {
     height: 100%; }
 
 .show-main_heading {
-  background-color: #861a0c;
   width: 100%;
   height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: aladdin;
-  font-size: 2.5rem;
+  color: #861a0c;
+  font-size: 5rem;
   font-weight: 700;
   letter-spacing: 2px;
-  transform: translate(0%, -170%);
+  transform: translate(0%, -100%);
   animation: fadeout 1s ease-out; }
+  @media only screen and (max-width: 37.5em) {
+    .show-main_heading {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .show-main_heading {
+      font-size: 4rem; } }
 
 .show-con {
   position: absolute;
   width: 80%;
-  height: 65%;
+  height: 75%;
   padding: 1%;
-  animation: fadeout 1.5s;
-  background-color: aqua; }
+  animation: fadeout 1.5s; }
   .show-con_box {
-    background-color: bisque;
+    width: 60%;
     margin: 2%; }
     .show-con_box_heading {
-      margin: 1%; }
+      margin: 1%;
+      font-size: 2rem;
+      font-family: oldnewspaper;
+      color: black; }
+      @media only screen and (max-width: 37.5em) {
+        .show-con_box_heading {
+          font-size: 1rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .show-con_box_heading {
+          font-size: 1.5rem; } }
     .show-con_box_content {
-      margin: 1.5%; }
+      margin: 1.5%;
+      font-size: 1.5rem;
+      font-family: oldnewspaper;
+      color: #86433a; }
+      @media only screen and (max-width: 37.5em) {
+        .show-con_box_content {
+          font-size: 1rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .show-con_box_content {
+          font-size: 1.5rem; } }
 
 .ink-pen {
   position: absolute;
-  width: 25%;
-  height: 65%;
-  transform: translate(100%, 22%); }
+  width: 35%;
+  height: 70%;
+  transform: translate(120%, 20%); }
+  @media only screen and (max-width: 37.5em) {
+    .ink-pen {
+      height: 50%;
+      width: 30%;
+      transform: translate(140%, 50%); } }
+  @media only screen and (max-width: 56.25em) {
+    .ink-pen {
+      height: 60%;
+      width: 32.5%;
+      transform: translate(130%, 30%); } }
   .ink-pen_img {
     height: 100%;
     width: 100%;
     animation: inkpen 1.5s ease; }
+
+.show-btn {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 10%;
+  animation: fadeout 2s ease-out; }
+
+.calendar-input {
+  width: 100% !important;
+  margin: 5% !important; }
 
 .about {
   display: flex;
@@ -1714,6 +1785,93 @@ textarea {
   width: 60%;
   height: 75%; }
 
+.main-section {
+  background: transparent;
+  max-width: 60rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 30px auto; }
+
+.timeBox {
+  position: absolute;
+  height: 35%;
+  width: 40%;
+  right: 10%;
+  top: 10%;
+  z-index: 10;
+  animation: fadeout 2s ease-out; }
+
+.time-display {
+  display: flex;
+  justify-content: center; }
+
+.time-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.clock-holder {
+  width: 80%;
+  padding: 2px;
+  position: relative; }
+
+.stopwatch {
+  text-align: center; }
+
+.stopwatch span {
+  background-color: rgba(134, 26, 12, 0.2);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 4rem; }
+
+.stopwatch .stopwatch-btn {
+  background: transparent;
+  margin-top: 30px;
+  margin-left: 5px;
+  border-radius: 10px;
+  border: none;
+  padding: 0.3rem 0.3rem;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 5rem;
+  transition: background 1s;
+  cursor: pointer; }
+
+.stopwatch .stopwatch-btn-red {
+  border: 2px solid #c85454;
+  color: #c85454; }
+
+.stopwatch .stopwatch-btn-yel {
+  border: 2px solid #d47216;
+  color: #d47216; }
+
+.stopwatch .stopwatch-btn-gre {
+  border: 2px solid #00aba9;
+  color: #00aba9; }
+
+.stopwatch .stopwatch-btn-red:hover {
+  background: #c85454;
+  border: 2px solid #c85454;
+  color: #fff; }
+
+.stopwatch .stopwatch-btn-yel:hover {
+  background: #ffc900;
+  border: 2px solid #ffc900;
+  color: #fff; }
+
+.stopwatch .stopwatch-btn-gre:hover {
+  background: #00aba9;
+  border: 2px solid #00aba9;
+  color: #fff; }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1728,10 +1886,19 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   min-height: 100vh;
-  background: #272a55;
-  background: radial-gradient(circle, #1e2140 0%, #151932 65%); }
+  margin-top: -4%;
+  margin-bottom: 5%;
+  background: radial-gradient(circle, rgba(30, 33, 64, 0.897) 0%, rgba(21, 25, 50, 0) 65%); }
+  .container-sec-1 {
+    margin: 5%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%; }
   .container-heading {
     margin: 0%;
     font-family: kingsOfThieves; }
@@ -1739,31 +1906,33 @@ code {
 .labels-con {
   margin: 5%;
   width: 50%;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center; }
+  justify-content: space-evenly; }
   .labels-con-min {
-    background-color: #fe6f6b;
-    width: 100%; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 80%; }
 
 .container h1 {
   font-size: 2.6rem;
   margin-bottom: 0.2rem; }
 
-.labels {
-  background-color: #fe6f6b; }
-
 .container .labels {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   font-size: 0.8rem;
   padding: 0.3rem 0.3rem;
-  margin: 10%;
+  margin: 5% auto;
   background-color: #0c0e1b;
-  width: 50%;
+  width: 60%;
   border-radius: 1.5rem; }
 
 .active-label {
@@ -1774,7 +1943,8 @@ code {
   display: flex;
   flex: 2;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 5%; }
 
 .time-wrapper {
   display: flex;
@@ -1791,16 +1961,17 @@ code {
 .button-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-evenly;
   padding: 2rem; }
 
 button {
   color: #efefef;
-  font-size: 0.8rem;
-  padding: 0.5rem 1.2rem;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 3rem;
-  margin: 0.2rem;
+  margin: 1rem;
   background: #0c0e1b;
   min-width: 80px;
   cursor: pointer; }
@@ -1818,7 +1989,7 @@ button {
 .form-container-2 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%; }
 

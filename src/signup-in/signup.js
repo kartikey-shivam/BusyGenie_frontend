@@ -33,7 +33,7 @@ const Signup = () => {
     }
 
     if (isSuccess || user) {
-      navigate("/");
+      navigate("/task");
     }
 
     dispatch(reset());
